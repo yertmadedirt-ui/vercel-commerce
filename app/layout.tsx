@@ -6,7 +6,7 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 import './globals.css';
 
-const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
+const { TWITTER_CREATOR, TWITTER_SITE } = process.env;
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : 'http://localhost:3000';
@@ -16,8 +16,9 @@ const twitterSite = TWITTER_SITE ? ensureStartsWith(TWITTER_SITE, 'https://') : 
 export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Store'
+    default: 'Spin The Lighter | Official Store'
   },
+  description: 'Official apparel and accessories from Spin The Lighter.',
   robots: {
     follow: true,
     index: true
